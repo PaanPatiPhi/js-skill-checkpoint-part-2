@@ -7,3 +7,12 @@ const students = [
 ];
 
 // เริ่มเขียนโค้ดตรงนี้
+
+function checkTotalScores(array){
+  let totalScores = array.filter(student=> student.score > 50)
+  .map(student=>student.score * 1.1)
+  .reduce((total, score)=> (total + score),0);
+
+  return console.log(`Total score is ${totalScores}`);
+}
+checkTotalScores(students);

@@ -10,3 +10,12 @@ const techcoolPeople = [
 ];
 
 // เริ่มเขียนโค้ดตรงนี้
+function checkAgeLowerThan20 (){
+const allPeople = [
+  ...techupPeople,
+  ...techcoolPeople
+]
+return  allPeople.filter(people => people.age< 20);
+}
+
+console.log(checkAgeLowerThan20())
